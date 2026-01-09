@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassChecker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+    <main class="simple-container">
+        <h1>PassChecker</h1>
+        <p class="lead">Check password strength</p>
+
+        <form id="passwordForm" class="simple-form">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="off" required>
+            <button type="submit">Check</button>
+        </form>
+
+        <section id="result" class="simple-result" hidden>
+            <div>Score: <strong id="scoreValue">0</strong>/100</div>
+            <div>Strength: <span id="strengthLevel">Not analyzed</span></div>
+            <div>Time to crack: <span id="crackTime">N/A</span></div>
+            <div id="tipsContainer">
+                <h4>Tips</h4>
+                <ul id="tipsList"></ul>
+            </div>
+            <div id="commonPasswordWarning" class="warning" hidden>
+                This password is commonly used. Choose another.
+            </div>
+        </section>
+
+        <p class="note">Passwords are not stored.</p>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

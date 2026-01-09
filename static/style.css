@@ -1,0 +1,30 @@
+/* Minimal CSS for simple UI */
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 24px;
+  color: #222;
+}
+.simple-container {
+  max-width: 480px;
+  margin: 24px auto;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+}
+.simple-container h1 { margin: 0 0 8px 0; font-size: 1.5rem; }
+.lead { margin: 0 0 12px 0; color: #555; font-size: 0.95rem; }
+.simple-form { display: grid; gap: 8px; }
+label { font-size: 0.9rem; }
+input[type="password"], button { padding: 8px 10px; font-size: 1rem; }
+input { border: 1px solid #ccc; border-radius: 4px; }
+button { background: #1976d2; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+button:active { transform: translateY(1px); }
+.simple-result { margin-top: 12px; padding-top: 12px; border-top: 1px solid #eee; }
+.simple-result div { margin: 6px 0; }
+.note { margin-top: 12px; font-size: 0.85rem; color: #666; }
+.warning { color: #8a1f1f; background: #fff0f0; padding: 8px; border-radius: 4px; }
+@media (max-width: 520px) { .simple-container { margin: 12px; padding: 16px; } }
